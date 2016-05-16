@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;font-family: "Microsoft Yahei"}
+        .tabTitle{
+            height: 30px;
+        }
+        .tabTitle div{
+            height: 30px;
+            width: 100px;
+            background: #abcdef;
+            float: left;
+            border-right: 1px solid rgb(20, 44, 108);
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            color: rgb(20, 44, 108);
+        }
+        .tabTitle div:hover{
+            background: rgb(20, 44, 108);
+            color: #abcdef;
+        }
+        .tabTitle div.active{
+            background: rgb(20, 44, 108);
+            color: #abcdef;
+        }
+        .tabTitle div.on{
+            background: red;
+            color: #abcdef;
+        }
+        .tabCon{
+            width: 303px;
+        }
+        .tabCon div{
+            width: 303px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            display: none;
+        }
+        .tabCon div:nth-child(1){
+            background: rgb(30, 173, 23);
+        }
+        .tabCon div:nth-child(2){
+            background: rgb(204, 125, 14);
+        }
+        .tabCon div:nth-child(3){
+            background: rgb(187, 29, 143);
+        }
+        .tabCon div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabSelect" id="tab1">
+        <div class="tabTitle" data-tab="tabTitle">
+            <div class="active">标题1</div>
+            <div>标题2</div>
+            <div>标题3</div>
+        </div>
+        <div class="tabCon" data-tab="tabCon">
+            <div class="active">内容1</div>
+            <div>内容2</div>
+            <div>内容3</div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="tabSelect" id="tab2">
+        <div class="tabTitle" data-tab="tabTitle">
+            <div class="active">标题1</div>
+            <div>标题2</div>
+            <div>标题3</div>
+        </div>
+        <div class="tabCon" data-tab="tabCon">
+            <div class="active">内容1</div>
+            <div>内容2</div>
+            <div>内容3</div>
+        </div>
+    </div>
+    <script src="require.js" data-main="main"></script>
+</body>
+</html>
